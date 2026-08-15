@@ -21,14 +21,23 @@
     <!-- NAVEGACIÓN -->
     <!-- ========================= -->
 
-    <nav>
+    <nav class="navbar">
 
         <div class="logo">
             LOS ANGELES STATE RP
         </div>
 
 
-        <div class="menu">
+        <!-- BOTÓN MENÚ PARA TELÉFONO -->
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+
+        <!-- MENÚ -->
+
+        <div class="menu" id="menu">
 
             <a href="#inicio">Inicio</a>
 
@@ -75,7 +84,6 @@
 
         <div class="cards">
 
-
             <div class="card">
 
                 <h3>Roleplay</h3>
@@ -111,7 +119,6 @@
 
             </div>
 
-
         </div>
 
     </section>
@@ -135,7 +142,6 @@
 
 
         <div class="department-cards">
-
 
             <div class="department-card">
 
@@ -180,7 +186,6 @@
 
             </div>
 
-
         </div>
 
     </section>
@@ -204,11 +209,8 @@
         </p>
 
 
-        <a href="#"
-           class="application-button">
-
+        <a href="#" class="application-button">
             VER APLICACIONES
-
         </a>
 
     </section>
@@ -259,6 +261,37 @@
         </p>
 
     </footer>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+
+            menu.classList.toggle("active");
+
+        });
+
+
+        const menuLinks = document.querySelectorAll(".menu a");
+
+        menuLinks.forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                menu.classList.remove("active");
+
+            });
+
+        });
+
+    </script>
 
 
 </body>

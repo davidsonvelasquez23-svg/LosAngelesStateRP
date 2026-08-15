@@ -6,9 +6,11 @@ html {
     scroll-behavior: smooth;
 }
 
+
 * {
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -24,10 +26,10 @@ body {
 
 
 /* ========================= */
-/* NAVEGACIÓN */
+/* NAVBAR */
 /* ========================= */
 
-nav {
+.navbar {
 
     min-height: 70px;
 
@@ -63,20 +65,20 @@ nav {
 }
 
 
+/* ========================= */
 /* MENÚ */
+/* ========================= */
 
 .menu {
 
     display: flex;
 
-    gap: 25px;
-
     align-items: center;
+
+    gap: 25px;
 
 }
 
-
-/* LINKS */
 
 .menu a {
 
@@ -88,16 +90,33 @@ nav {
 
     transition: 0.2s;
 
-    white-space: nowrap;
-
 }
 
-
-/* HOVER */
 
 .menu a:hover {
 
     color: #4da6ff;
+
+}
+
+
+/* ========================= */
+/* BOTÓN MENÚ */
+/* ========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
 
 }
 
@@ -124,21 +143,7 @@ nav {
 
 
 /* ========================= */
-/* SECCIONES */
-/* ========================= */
-
-.about,
-.departments,
-.applications,
-.discord {
-
-    width: 100%;
-
-}
-
-
-/* ========================= */
-/* SOBRE NOSOTROS */
+/* INFORMACIÓN */
 /* ========================= */
 
 .about {
@@ -201,8 +206,6 @@ nav {
 }
 
 
-/* CARD */
-
 .card {
 
     background-color: #151d26;
@@ -220,8 +223,6 @@ nav {
 }
 
 
-/* HOVER */
-
 .card:hover {
 
     transform: translateY(-5px);
@@ -231,8 +232,6 @@ nav {
 }
 
 
-/* CARD TITLE */
-
 .card h3 {
 
     font-size: 23px;
@@ -241,8 +240,6 @@ nav {
 
 }
 
-
-/* CARD TEXT */
 
 .card p {
 
@@ -266,8 +263,6 @@ nav {
 }
 
 
-/* DEPARTMENT CARDS */
-
 .department-cards {
 
     display: grid;
@@ -282,8 +277,6 @@ nav {
 
 }
 
-
-/* DEPARTMENT CARD */
 
 .department-card {
 
@@ -301,8 +294,6 @@ nav {
 
 }
 
-
-/* HOVER */
 
 .department-card:hover {
 
@@ -360,8 +351,6 @@ nav {
 
 }
 
-
-/* BUTTON */
 
 .application-button {
 
@@ -479,7 +468,7 @@ footer p {
 
 @media (max-width: 1000px) {
 
-    nav {
+    .navbar {
 
         padding: 15px 25px;
 
@@ -529,15 +518,11 @@ footer p {
 
 @media (max-width: 700px) {
 
-    nav {
+    .navbar {
 
-        padding: 20px;
+        padding: 18px 20px;
 
-        flex-direction: column;
-
-        justify-content: center;
-
-        gap: 15px;
+        flex-wrap: wrap;
 
     }
 
@@ -546,27 +531,49 @@ footer p {
 
         font-size: 18px;
 
-        text-align: center;
+    }
+
+
+    /* MOSTRAR BOTÓN */
+
+    .menu-toggle {
+
+        display: block;
 
     }
 
 
+    /* OCULTAR MENÚ */
+
     .menu {
+
+        display: none;
 
         width: 100%;
 
-        flex-wrap: wrap;
+        flex-direction: column;
 
-        justify-content: center;
+        align-items: center;
 
-        gap: 12px 18px;
+        gap: 18px;
+
+        padding-top: 20px;
+
+    }
+
+
+    /* MOSTRAR MENÚ */
+
+    .menu.active {
+
+        display: flex;
 
     }
 
 
     .menu a {
 
-        font-size: 14px;
+        font-size: 16px;
 
     }
 
@@ -617,31 +624,9 @@ footer p {
     }
 
 
-    .card {
-
-        padding: 25px;
-
-    }
-
-
     .department-cards {
 
         grid-template-columns: 1fr;
-
-    }
-
-
-    .department-card {
-
-        padding: 30px 20px;
-
-    }
-
-
-    .applications p,
-    .discord p {
-
-        font-size: 16px;
 
     }
 
@@ -666,7 +651,7 @@ footer p {
 
 
 /* ================================================= */
-/* TELÉFONOS MUY PEQUEÑOS */
+/* TELÉFONOS PEQUEÑOS */
 /* ================================================= */
 
 @media (max-width: 400px) {
@@ -678,16 +663,9 @@ footer p {
     }
 
 
-    .menu {
-
-        gap: 10px 14px;
-
-    }
-
-
     .menu a {
 
-        font-size: 13px;
+        font-size: 14px;
 
     }
 
@@ -698,14 +676,5 @@ footer p {
 
     }
 
-
-    .about,
-    .departments,
-    .applications,
-    .discord {
-
-        padding: 55px 15px;
-
-    }
 
 }

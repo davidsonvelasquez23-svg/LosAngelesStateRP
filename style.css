@@ -1,0 +1,524 @@
+/* ========================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #0b0f14;
+
+    color: white;
+}
+
+
+/* ========================= */
+/* NAVEGACIÓN */
+/* ========================= */
+
+nav {
+
+    height: 70px;
+
+    background-color: #111820;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* MENÚ */
+
+.menu {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+/* LINKS */
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+
+    color: #4da6ff;
+
+}
+
+
+/* ========================= */
+/* HERO / BANNER */
+/* ========================= */
+
+.hero {
+
+    min-height: 650px;
+
+    background-image: url("losangeles-banner.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ========================= */
+/* SOBRE NOSOTROS */
+/* ========================= */
+
+.about {
+
+    padding: 80px 40px;
+
+    text-align: center;
+
+    background-color: #0f151c;
+
+}
+
+
+.about h2,
+.departments h2,
+.applications h2,
+.discord h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-text,
+.section-text {
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    color: #b8c0cc;
+
+    line-height: 1.7;
+
+    font-size: 18px;
+
+}
+
+
+/* ========================= */
+/* TARJETAS */
+/* ========================= */
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.card {
+
+    background-color: #151d26;
+
+    padding: 30px;
+
+    width: 280px;
+
+    border-radius: 10px;
+
+    border: 1px solid #202b37;
+
+    transition: 0.2s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #4da6ff;
+
+}
+
+
+.card h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card p {
+
+    color: #aeb7c2;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================= */
+/* DEPARTAMENTOS */
+/* ========================= */
+
+.departments {
+
+    padding: 80px 40px;
+
+    text-align: center;
+
+}
+
+
+.department-cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.department-card {
+
+    background-color: #151d26;
+
+    border: 1px solid #202b37;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    width: 220px;
+
+    transition: 0.2s;
+
+}
+
+
+.department-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #4da6ff;
+
+}
+
+
+.department-card h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.department-card p {
+
+    color: #aeb7c2;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================= */
+/* APLICACIONES */
+/* ========================= */
+
+.applications {
+
+    padding: 90px 40px;
+
+    text-align: center;
+
+    background-color: #0f151c;
+
+}
+
+
+.applications p {
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #b8c0cc;
+
+    line-height: 1.6;
+
+    font-size: 18px;
+
+}
+
+
+.application-button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #4da6ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+
+}
+
+
+.application-button:hover {
+
+    background-color: #3189df;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ========================= */
+/* DISCORD */
+/* ========================= */
+
+.discord {
+
+    padding: 90px 40px;
+
+    text-align: center;
+
+}
+
+
+.discord p {
+
+    color: #b8c0cc;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.discord-button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #5865F2;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+
+}
+
+
+.discord-button:hover {
+
+    background-color: #4752C4;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #080b0f;
+
+    color: #707b88;
+
+    font-size: 14px;
+
+}
+
+
+footer p {
+
+    margin: 8px;
+
+}
+
+
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+
+    nav {
+
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+
+        background-position: center;
+
+    }
+
+
+    .cards {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .card {
+
+        width: 80%;
+
+    }
+
+
+    .department-cards {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .department-card {
+
+        width: 75%;
+
+    }
+
+
+    .about,
+    .departments,
+    .applications,
+    .discord {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .about h2,
+    .departments h2,
+    .applications h2,
+    .discord h2 {
+
+        font-size: 30px;
+
+    }
+
+}
